@@ -1,0 +1,18 @@
+.menu-card {
+  width: 250px;
+  height: 180px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  font-size: 20px;
+  font-weight: bold;
+  color: #0047ba;
+  transition: 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+}

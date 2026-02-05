@@ -1,0 +1,59 @@
+.pedido-container {
+  width: 90%;
+  max-width: 450px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.pedido-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pedido-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color:#333
+}
+
+.pedido-form label {
+  font-weight: 600;
+}
+
+.pedido-form input {
+  padding: 10px;
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.consultar-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.consultar-btn:hover {
+  background: #005fcc;
+}
+
+/* MENSAJE DE ERROR */
+.error-msg {
+  margin-top: 10px;
+  color: #d60000;
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,0 +1,111 @@
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+.form-container {
+  max-width: 500px;
+  /* Margen superior aumentado para que el Navbar no tape el contenido */
+  margin: 120px auto 50px auto; 
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   TÍTULO
+   ========================= */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* =========================
+   ETIQUETAS (LABELS)
+   ========================= */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  text-align: left;
+}
+
+/* =========================
+   INPUTS Y SELECTS
+   ========================= */
+/* Aplicamos el mismo estilo a ambos para que la interfaz sea coherente */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  outline: none;
+  transition: all 0.2s ease;
+  /* Importante para que el padding no ensanche el elemento */
+  box-sizing: border-box; 
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-container input:disabled,
+.form-container select:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   BOTÓN PRINCIPAL
+   ========================= */
+.form-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.form-container button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.form-container button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.form-container button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* =========================
+   MENSAJES DE ERROR
+   ========================= */
+.error-msg {
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fef2f2;
+  padding: 10px;
+  border-radius: 4px;
+}

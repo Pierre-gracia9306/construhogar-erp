@@ -1,0 +1,63 @@
+/* ============================================================
+   CONTENEDOR DE LA PÁGINA (MENU-PAGE)
+   Asegura que el menú ocupe toda la pantalla y esté centrado.
+   ============================================================ */
+.menu-page {
+  background-color: #f5f5f5; /* Fondo gris muy suave para resaltar las tarjetas blancas */
+  min-height: calc(100vh - 120px); /* Altura corregida restando el espacio del navbar */
+  padding-top: 120px; /* Espacio superior para que el Navbar no tape el contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal con el azul institucional de la ferretería */
+.menu-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0047ba;
+  margin-bottom: 40px;
+}
+
+/* ============================================================
+   CUADRÍCULA (GRID)
+   Define la organización de 2 columnas de 250px cada una.
+   ============================================================ */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 250px); /* Dos columnas fijas */
+  gap: 40px; /* Espacio de separación entre tarjetas */
+  justify-content: center;
+}
+
+/* ============================================================
+   TARJETAS (CARDS)
+   Diseño de los botones grandes del menú.
+   ============================================================ */
+.menu-card {
+  width: 250px;
+  height: 180px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12); /* Sombra para dar efecto de relieve */
+  font-size: 20px;
+  font-weight: bold;
+  color: #0047ba;
+  transition: 0.2s ease; /* Transición suave para el efecto hover */
+  cursor: pointer;
+}
+
+/* Efecto visual cuando el usuario pone el cursor sobre una tarjeta */
+.menu-card:hover {
+  transform: translateY(-4px); /* La tarjeta sube un poco al pasar el mouse */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.18); /* La sombra se intensifica */
+}
+
+/* Estilo para los títulos dentro de las tarjetas */
+.menu-card h3 {
+  margin: 0;
+  pointer-events: none; /* Evita que el texto interfiera con el clic de la tarjeta */
+}

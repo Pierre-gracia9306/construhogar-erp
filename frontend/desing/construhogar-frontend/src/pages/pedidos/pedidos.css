@@ -1,0 +1,50 @@
+/* Contenedor principal: Ocupa toda la pantalla menos el espacio del Navbar */
+.pedidos-page {
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 120px);
+  padding-top: 120px; /* Espacio para que el Navbar no tape el título */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título con el azul corporativo de la tienda */
+.pedidos-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0047ba;
+  margin-bottom: 40px;
+}
+
+/* Rejilla de tarjetas: Mantiene 2 columnas fijas de 250px */
+.pedidos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Tarjetas (Cards): Diseñadas como botones grandes y táctiles */
+.pedidos-card {
+  width: 250px;
+  height: 180px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Por si el texto es largo */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  font-size: 20px;
+  font-weight: bold;
+  color: #0047ba;
+  transition: 0.2s ease; /* Suaviza el movimiento al pasar el mouse */
+  cursor: pointer;
+}
+
+/* Efecto visual: La tarjeta "levanta" cuando el empleado pone el cursor encima */
+.pedidos-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+}

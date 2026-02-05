@@ -1,0 +1,46 @@
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+.facturacion-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* =========================
+   TÍTULO
+   ========================= */
+.facturacion-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* =========================
+   ACCIONES / BOTONES
+   ========================= */
+.facturacion-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.facturacion-actions button {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.facturacion-actions button:hover {
+  background-color: #0056b3;
+}

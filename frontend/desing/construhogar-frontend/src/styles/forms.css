@@ -1,0 +1,27 @@
+body {
+  padding-top: 80px;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  /* Esto centra TODO en la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 350px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0044cc;
+}

@@ -1,0 +1,62 @@
+.cliente-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.cliente-title {
+  text-align: center;
+  color: #0047ba;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.cliente-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cliente-form input,
+.cliente-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #1a202c; /* Letra oscura para que se vea al escribir */
+  background-color: #fff;
+}
+
+.consultar-btn {
+  background-color: #0047ba;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.consultar-btn:hover:not(:disabled) {
+  background-color: #003b99;
+}
+
+.consultar-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: #dc2626;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #fee2e2;
+  padding: 10px;
+  border-radius: 8px;
+}

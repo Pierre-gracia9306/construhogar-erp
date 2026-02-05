@@ -1,0 +1,181 @@
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+.detalle-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* 🔥 Asegura que el texto general sea oscuro */
+}
+
+/* =========================
+   ENCABEZADO DE FACTURA
+   ========================= */
+.factura-header {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.factura-header h1 {
+  margin: 0;
+  color: #2c3e50; /* Azul oscuro */
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.factura-header p {
+  color: #555; /* Gris oscuro para el NIT */
+}
+
+.info-principal {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  color: #2c3e50; /* Texto oscuro para la info de factura */
+}
+
+/* =========================
+   CLIENTE Y EMPLEADO
+   ========================= */
+.info-cliente-empleado {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+  color: #444; /* Letras oscuras para los nombres */
+}
+
+.bloque {
+  flex: 1;
+  padding: 10px;
+}
+
+.bloque h4 {
+  margin-bottom: 5px;
+  color: #7f8c8d; /* Gris para títulos secundarios */
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.bloque p {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+/* =========================
+   TABLA DE MATERIALES
+   ========================= */
+.tabla-materiales {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  color: #333; /* 🔥 Letras de la tabla en negro/gris oscuro */
+}
+
+.tabla-materiales th {
+  background-color: #34495e;
+  color: white; /* Aquí sí va blanco porque el fondo es oscuro */
+  padding: 12px;
+  text-align: left;
+}
+
+.tabla-materiales td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* =========================
+   SECCIÓN TOTALES
+   ========================= */
+.total-seccion {
+  text-align: right;
+  padding: 20px;
+  background: #2c3e50;
+  color: white; /* Blanco sobre fondo oscuro */
+  border-radius: 8px;
+}
+
+.total-seccion h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* =========================
+   ACCIONES (BOTONES)
+   ========================= */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.acciones button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white; /* Texto de botones siempre blanco */
+  transition: all 0.3s ease;
+}
+
+.btn-cerrar {
+  background-color: #95a5a6 !important;
+}
+
+.btn-imprimir {
+  background-color: #27ae60 !important;
+}
+
+.acciones button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ESTILOS PARA IMPRESIÓN
+   ========================= */
+@media print {
+  .no-print, 
+  .acciones, 
+  nav, 
+  header.navbar { 
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .detalle-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .total-seccion {
+    background: #eee !important;
+    color: black !important;
+    border: 1px solid #ccc;
+  }
+
+  .tabla-materiales th {
+    background-color: #eee !important;
+    color: black !important;
+    border: 1px solid #ccc;
+  }
+}

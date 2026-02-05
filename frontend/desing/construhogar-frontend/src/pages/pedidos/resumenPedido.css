@@ -1,0 +1,183 @@
+.resumen-container {
+  width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00000020;
+}
+
+/* ENCABEZADO */
+.factura-header {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #222;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+.factura-header h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+  color: #000;
+}
+
+.header-sub {
+  font-size: 16px;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* INFO DEL PEDIDO */
+.pedido-info {
+  margin-bottom: 25px;
+  font-size: 15px;
+  color: #000;
+}
+
+/* TABLA */
+.tabla-factura {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.tabla-factura th {
+  background: #f0f0f0 !important;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  text-align: left;
+  color: #000 !important;
+}
+
+.tabla-factura td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #000 !important;
+}
+
+.tabla-factura tr:hover {
+  background: #fafafa;
+}
+
+/* TOTALES */
+.totales {
+  text-align: right;
+  font-size: 16px;
+  color: #000;
+}
+
+.total-final {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* BOTONES */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn-cerrar,
+
+.btn-imprimir {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-cerrar {
+  background: #444;
+  color: white;
+}
+
+.btn-imprimir {
+  background: #007bff;
+  color: white;
+}
+
+.btn-imprimir:hover {
+  background: #005fcc;
+}
+
+.btn-editar {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-editar:hover {
+  background: #218838;
+}
+
+
+/* ============================================================
+   🔥 IMPRESIÓN PROFESIONAL — SOLO SE IMPRIME EL RESUMEN
+   ============================================================ */
+/* TOTALES centrados y sin cortes en impresión */
+@media print {
+
+  /* Ocultar elementos que NO se imprimen */
+  .navbar,
+  .acciones,
+  .btn-cerrar,
+  .btn-imprimir {
+    display: none !important;
+  }
+
+  /* Fondo limpio */
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Contenedor del resumen */
+  .resumen-container {
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Tabla no se corta */
+  .tabla-factura {
+    page-break-inside: auto;
+  }
+
+  .tabla-factura tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  /* 🔥 TOTALES CENTRADOS */
+  .totales {
+    margin-top: 30px !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    page-break-inside: avoid !important;
+  }
+
+  .totales p {
+    margin: 5px 0 !important;
+    text-align: center !important;
+  }
+
+  .total-final {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+  }
+}
