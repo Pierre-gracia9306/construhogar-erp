@@ -2,6 +2,19 @@ package com.construhogar.backend.controller;
 
 import java.util.List;
 
+/**
+ * PATRÓN ESTÁNDAR DE CONTROLLER
+ * Todos los controllers siguen esta estructura:
+ * 
+ * GET    /api/entidad        → listar()
+ * GET    /api/entidad/{id}   → obtenerPorId()
+ * POST   /api/entidad        → crear()
+ * PUT    /api/entidad/{id}   → actualizar()
+ * DELETE /api/entidad/{id}   → eliminar()
+ * 
+ * Mantener consistencia entre controllers.
+ */
+
 import org.springframework.web.bind.annotation.*;
 
 import com.construhogar.backend.model.Pedido;
