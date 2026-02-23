@@ -30,6 +30,16 @@ public class PedidoService {
         return pedidoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Pedido no encontrado"));
     }
+    
+    // Buscar pedidos por estado
+    public List<Pedido> buscarPorEstado (String estado){
+    	//Validar que el estado no sea null o vacio
+    	if (estado == null || estado.trim().isEmpty()) {
+    		throw new IllegalArgumentException("El estado no puede estar vacio");
+    	}
+    	// Buscar en repositorio
+    	return pedidoRepository.findByEstado(estado.toUpperCase());
+    }
 
     // ============================================================
     // GUARDAR (FACTURAR) - Descuenta stock del inventario

@@ -29,6 +29,12 @@ public class PedidoController {
     public Pedido obtenerPorId(@PathVariable Integer id) {
         return pedidoService.obtenerPorId(id);
     }
+    
+    // GET - Obtener pedidos por "estado"
+    @GetMapping("/estado/{estado}")
+    public List<Pedido> buscarPorEstado(@PathVariable String estado) {
+    	return pedidoService.buscarPorEstado(estado);
+    }
 
     // POST - crear pedido
     @PostMapping
@@ -47,5 +53,8 @@ public class PedidoController {
     public void eliminar(@PathVariable Integer id) {
         pedidoService.eliminar(id);
     }
+    
 }
+
+
 
