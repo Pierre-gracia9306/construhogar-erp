@@ -18,6 +18,11 @@ public class CompraController {
     public CompraController(CompraService compraService) {
         this.compraService = compraService;
     }
+    
+    @GetMapping("/proveedor/{idProveedor}")
+    public List<Compra> obtenerPorProveedor(@PathVariable Integer idProveedor){
+    	return compraService.obtenerPorProveedor(idProveedor);
+    }
 
     @GetMapping
     public List<Compra> listar() {
